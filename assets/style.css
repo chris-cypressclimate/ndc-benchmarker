@@ -1,0 +1,339 @@
+/* assets/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap');
+
+#app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+@media (min-width: 670px) {
+    #app-container {
+        padding: 10px;
+    }
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #f5f5f0; /* Subtle, light, warm grey */
+    margin: 0;
+    font-size: 1rem; /* Default font size */
+}
+
+a {
+    color: inherit;
+    text-decoration-color: #7bccc4;
+    text-decoration-thickness: 1.5px;
+}
+
+/* --- Banner & Header --- */
+.banner-table {
+    border-collapse: collapse;
+    height: auto; /* Let content determine height */
+    width: auto; /* Let content determine width */
+}
+
+.banner-table tbody {
+    display: table;
+    width: auto;
+}
+
+.banner-table tr {
+    display: table-row;
+}
+
+.banner-table td {
+    padding: 0;
+    border: none;
+    vertical-align: middle;
+}
+
+.banner-table td:first-child {
+    width: 65px;
+}
+
+.banner-count-a, .banner-count-b-bold {
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 1;
+}
+
+.banner-count-a {
+    color: #296186;
+}
+
+.banner-count-b-bold {
+    color: #43a2ca;
+}
+
+.banner-text {
+    font-size: 0.85rem;
+    color: #7f7f7f;
+    line-height: 1.2;
+}
+
+.banner-markdown p {
+    margin-bottom: 0;
+    display: inline; /* Keeps the markdown on the same line */
+}
+
+.spacer-col {
+    width: 15px; /* Default space */
+}
+
+.country-counts-container {
+    background-color: white;
+    padding: 10px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 5px;
+    display: flex;
+}
+
+/* --- Explainer Text --- */
+.explainer-text {
+    font-size: 0.95rem;
+    color: black;
+}
+
+
+/* --- Sticky Tabs --- */
+.sticky-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #f5f5f0; /* Same as app background */
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.sticky-tabs::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), transparent);
+}
+
+
+/* Default tab style */
+.nav-link {
+    color: #555;
+    background-color: #f5f5f0; /* Same as app background */
+    border-color: #f5f5f0 #f5f5f0 #ddd !important; /* Match background, keep bottom border */
+    font-size: 0.95rem;
+}
+
+/* Highlight active tab */
+.nav-link.active {
+    background-color: #296186 !important; /* New tab color */
+    border-color: #296186 #296186 #296186 !important; /* New tab color border */
+    font-weight: bold;
+    color: white !important; /* White text */
+}
+
+/* --- Section Headers --- */
+.section-header {
+    background-color: #43a2ca; /* New section header color */
+    padding: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* --- Tables --- */
+.clean-table {
+    font-size: 0.95rem; /* ~95% of base font size */
+    background-color: white; /* White background for the table */
+    border-collapse: collapse;
+}
+
+.clean-table th, .clean-table td {
+    padding: 6px 5px; /* Reduced horizontal padding */
+    vertical-align: top;
+    border: none;
+}
+
+.clean-table tr td {
+    border-bottom: 4px solid #f8f8f8; /* Thicker faint grey border between rows */
+}
+
+.clean-table tr:last-child td {
+    border-bottom: none;
+}
+
+.clean-table .no-border-row td {
+    border-bottom-color: white !important;
+}
+
+.clean-table .tight-spacing-row td {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.clean-table td:first-child {
+    font-weight: normal !important;
+}
+
+/* --- Compact Table for Net Zero Chart --- */
+.clean-table.compact-table td {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.clean-table.compact-table tr td {
+    border-bottom: 1px solid white;
+}
+
+.net-zero-summary-table td:first-child, .net-zero-summary-table th:first-child {
+    width: 250px;
+}
+
+/* Set width for the first column in the overview table */
+@media (min-width: 768px) {
+    .clean-table td:first-child {
+        width: 300px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 550px) {
+    .clean-table {
+        font-size: 0.85rem;
+    }
+    .peak-emissions-table td:first-child {
+        min-width: 120px;
+    }
+    .net-zero-summary-table td:first-child, .net-zero-summary-table th:first-child {
+        width: 185px;
+    }
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #296186;
+    color: white;
+    padding: 10px 0;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-logo {
+    height: 96px;
+    width: 96px;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 96px; /* Match the height of the logo */
+}
+
+/* --- Graph Notes --- */
+.graph-notes {
+    font-size: 0.85rem;
+    color: #7f7f7f;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+/* --- Badges for the Linear Chart Table --- */
+.badge-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.ag-header-group-cell .ag-header-group-text {
+    white-space: pre-wrap !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+.header-dark-grey {
+    background-color: #e0e0e0 !important;
+}
+
+.header-light-grey {
+    background-color: #f0f0f0 !important;
+}
+
+.ag-header-cell-label {
+    white-space: pre-wrap !important;
+    font-weight: normal !important;
+}
+
+.ag-cell {
+    line-height: 1.2 !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-right .ag-header-floating-filter-button {
+    grid-column: 1;
+}
+
+.text-right .ag-header-cell-text {
+    grid-column: 2;
+}
+
+.btn-primary {
+    background-color: #43a2ca !important;
+    border-color: #43a2ca !important;
+}
+
+@media (max-width: 390px) {
+    .nav-tabs .nav-link {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .ag-header-group-text {
+        white-space: normal !important;
+    }
+    .footer .row {
+        flex-wrap: nowrap;
+    }
+    .footer-logo {
+        height: 72px !important;
+        width: 72px !important;
+    }
+    .footer-text {
+        font-size: 0.8rem !important;
+    }
+    .footer-contact-details {
+        height: 72px !important;
+    }
+}
+
+@media (max-width: 669px) {
+    .footer-logo {
+        max-width: 100%;
+        height: auto;
+    }
+}
