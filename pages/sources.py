@@ -66,6 +66,8 @@ Downscaled [NGFS](https://www.ngfs.net/ngfs-scenarios-portal/) climate scenario 
             dcc.Markdown("""
 Data and visualizations are provided under a [Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license, which allows unrestricted reuse with proper attribution. The dashboard may be cited as: **Chris Sall, “NDC Benchmarker” (2026), Cypress Climate Advisory, https://ndcbenchmarker.org/**.
 
+The dashboard was built on Python using Plotly Dash, with help from Gemini Code Assist. Data and code can be found on GitHub [here](https://github.com/chris-cypressclimate/ndc-benchmarker).
+
 Some of the underlying data sets featured in this dashboard may have different licenses or permissions. The dashboard provides links and citations for these underlying sources where available. Please refer to the original licensing and permissions for these data sets included in the list of sources below and cite them appropriately when referring to specific sections of this database.
 
 The data compiled in this unofficial database are intended for general informational purposes only. No guarantees are made as to their completeness, accuracy, correctness, timeliness, or reliability.
@@ -95,3 +97,4 @@ The data compiled in this unofficial database are intended for general informati
             """)
         ])
     ], className="p-3")
+
